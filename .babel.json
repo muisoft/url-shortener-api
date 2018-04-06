@@ -1,0 +1,952 @@
+{
+  "{\"filename\":\"/app/server.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],null],[[],null],[[],null],[[],{\"loose\":false,\"spec\":false}],[[],null],[[],null],[[],{\"spec\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"async\":false,\"asyncGenerators\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.0": {
+    "metadata": {
+      "usedHelpers": [
+        "interopRequireDefault"
+      ],
+      "marked": [],
+      "modules": {
+        "imports": [
+          {
+            "source": "express",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "express"
+              }
+            ]
+          },
+          {
+            "source": "path",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "path"
+              }
+            ]
+          },
+          {
+            "source": "./routes/router",
+            "imported": [
+              "router"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "router",
+                "local": "router"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [],
+          "specifiers": []
+        }
+      }
+    },
+    "options": {
+      "filename": "/app/server.js",
+      "filenameRelative": "/app/server.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false,
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "async": false,
+            "asyncGenerators": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "server.js",
+      "sourceFileName": "server.js",
+      "sourceRoot": "/app",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/app",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "server"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nvar _express = require('express');\n\nvar _express2 = _interopRequireDefault(_express);\n\nvar _path = require('path');\n\nvar _path2 = _interopRequireDefault(_path);\n\nvar _router = require('./routes/router');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar app = (0, _express2.default)();\n\napp.use(_express2.default.static(_path2.default.join(__dirname, 'views')));\napp.use(_router.router);\n\napp.listen(process.env.PORT);\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNlcnZlci5qcyJdLCJuYW1lcyI6WyJhcHAiLCJ1c2UiLCJzdGF0aWMiLCJqb2luIiwiX19kaXJuYW1lIiwibGlzdGVuIiwicHJvY2VzcyIsImVudiIsIlBPUlQiXSwibWFwcGluZ3MiOiI7O0FBQUE7Ozs7QUFDQTs7OztBQUNBOzs7O0FBQ0EsSUFBTUEsTUFBTSx3QkFBWjs7QUFFQUEsSUFBSUMsR0FBSixDQUFRLGtCQUFRQyxNQUFSLENBQWUsZUFBS0MsSUFBTCxDQUFVQyxTQUFWLEVBQXFCLE9BQXJCLENBQWYsQ0FBUjtBQUNBSixJQUFJQyxHQUFKOztBQUVBRCxJQUFJSyxNQUFKLENBQVdDLFFBQVFDLEdBQVIsQ0FBWUMsSUFBdkIiLCJmaWxlIjoic2VydmVyLmpzIiwic291cmNlUm9vdCI6Ii9hcHAiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgZXhwcmVzcyBmcm9tICdleHByZXNzJ1xuaW1wb3J0IHBhdGggZnJvbSAncGF0aCdcbmltcG9ydCB7IHJvdXRlciB9IGZyb20gJy4vcm91dGVzL3JvdXRlcidcbmNvbnN0IGFwcCA9IGV4cHJlc3MoKVxuXG5hcHAudXNlKGV4cHJlc3Muc3RhdGljKHBhdGguam9pbihfX2Rpcm5hbWUsICd2aWV3cycpKSlcbmFwcC51c2Uocm91dGVyKVxuXG5hcHAubGlzdGVuKHByb2Nlc3MuZW52LlBPUlQpIl19",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "server.js"
+      ],
+      "names": [
+        "app",
+        "use",
+        "static",
+        "join",
+        "__dirname",
+        "listen",
+        "process",
+        "env",
+        "PORT"
+      ],
+      "mappings": ";;AAAA;;;;AACA;;;;AACA;;;;AACA,IAAMA,MAAM,wBAAZ;;AAEAA,IAAIC,GAAJ,CAAQ,kBAAQC,MAAR,CAAe,eAAKC,IAAL,CAAUC,SAAV,EAAqB,OAArB,CAAf,CAAR;AACAJ,IAAIC,GAAJ;;AAEAD,IAAIK,MAAJ,CAAWC,QAAQC,GAAR,CAAYC,IAAvB",
+      "file": "server.js",
+      "sourceRoot": "/app",
+      "sourcesContent": [
+        "import express from 'express'\nimport path from 'path'\nimport { router } from './routes/router'\nconst app = express()\n\napp.use(express.static(path.join(__dirname, 'views')))\napp.use(router)\n\napp.listen(process.env.PORT)"
+      ]
+    },
+    "mtime": 1523035894840
+  },
+  "{\"filename\":\"/app/routes/router.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],null],[[],null],[[],null],[[],{\"loose\":false,\"spec\":false}],[[],null],[[],null],[[],{\"spec\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"async\":false,\"asyncGenerators\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app/routes\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.0": {
+    "metadata": {
+      "usedHelpers": [
+        "interopRequireDefault"
+      ],
+      "marked": [],
+      "modules": {
+        "imports": [
+          {
+            "source": "express",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "express"
+              }
+            ]
+          },
+          {
+            "source": "is-url",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "isUrl"
+              }
+            ]
+          },
+          {
+            "source": "../utils",
+            "imported": [
+              "getFullUrl",
+              "saveUrl",
+              "searchShortCode",
+              "searchUrl",
+              "newShortCode"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "getFullUrl",
+                "local": "getFullUrl"
+              },
+              {
+                "kind": "named",
+                "imported": "saveUrl",
+                "local": "saveUrl"
+              },
+              {
+                "kind": "named",
+                "imported": "searchShortCode",
+                "local": "searchShortCode"
+              },
+              {
+                "kind": "named",
+                "imported": "searchUrl",
+                "local": "searchUrl"
+              },
+              {
+                "kind": "named",
+                "imported": "newShortCode",
+                "local": "newShortCode"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [
+            "router"
+          ],
+          "specifiers": [
+            {
+              "kind": "local",
+              "local": "router",
+              "exported": "router"
+            }
+          ]
+        }
+      }
+    },
+    "options": {
+      "filename": "/app/routes/router.js",
+      "filenameRelative": "/app/routes/router.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false,
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "async": false,
+            "asyncGenerators": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "router.js",
+      "sourceFileName": "router.js",
+      "sourceRoot": "/app/routes",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/app/routes",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "router"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\nexports.router = undefined;\n\nvar _express = require('express');\n\nvar _express2 = _interopRequireDefault(_express);\n\nvar _isUrl = require('is-url');\n\nvar _isUrl2 = _interopRequireDefault(_isUrl);\n\nvar _utils = require('../utils');\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar router = exports.router = _express2.default.Router();\n\nrouter.get('/new/*', function (req, res) {\n    // We get the first index of our array of parameters because user can insert \n    // as many as url they want due to '*' sign but we need thier base url\n    var originalUrl = req.params[0];\n    // then we test for validity of the url inserted by the User \n    // if passed we send json response with the original and short url supplied by User\n    // otherwise, we send json response with error message\n    if ((0, _isUrl2.default)(originalUrl)) {\n        // We generate new short code but first check if we have duplicate Url\n        (0, _utils.searchUrl)(originalUrl).then(function (shortCode) {\n            if (shortCode) {\n                // If passed the test we save short code and original url to database\n                res.json({ error: 'Url already exist' });\n            } else {\n                (0, _utils.saveUrl)(originalUrl).then(function (save) {\n                    res.json({\n                        'shortUrl': (0, _utils.getFullUrl)(req) + save.shortCode,\n                        'originalUrl': originalUrl\n                    });\n                });\n            }\n        });\n    } else {\n        res.json({ error: 'Please insert correct url' });\n    }\n});\nrouter.get('/:shortCode', function (req, res) {\n    // We get short code given by User from url then check if is correct else send error response \n    var shortCode = req.params.shortCode;\n    // then we search for the short code in the database \n    // if exist we get its original url then redirect to the Url otherwise, we send error \n    // response to User \n    (0, _utils.searchShortCode)(shortCode).then(function (originalUrl) {\n        if (originalUrl) {\n            res.status(200).redirect(originalUrl);\n        } else {\n            res.status(404).json({ error: 'Page not found' });\n        }\n    });\n});\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInJvdXRlci5qcyJdLCJuYW1lcyI6WyJyb3V0ZXIiLCJSb3V0ZXIiLCJnZXQiLCJyZXEiLCJyZXMiLCJvcmlnaW5hbFVybCIsInBhcmFtcyIsInRoZW4iLCJzaG9ydENvZGUiLCJqc29uIiwiZXJyb3IiLCJzYXZlIiwic3RhdHVzIiwicmVkaXJlY3QiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7QUFBQTs7OztBQUNBOzs7O0FBQ0E7Ozs7QUFFTyxJQUFNQSwwQkFBUyxrQkFBUUMsTUFBUixFQUFmOztBQUVQRCxPQUFPRSxHQUFQLENBQVcsUUFBWCxFQUFxQixVQUFDQyxHQUFELEVBQU1DLEdBQU4sRUFBYztBQUMvQjtBQUNBO0FBQ0EsUUFBSUMsY0FBY0YsSUFBSUcsTUFBSixDQUFXLENBQVgsQ0FBbEI7QUFDQTtBQUNBO0FBQ0E7QUFDQSxRQUFHLHFCQUFNRCxXQUFOLENBQUgsRUFBc0I7QUFDbkI7QUFDQSw4QkFBVUEsV0FBVixFQUF1QkUsSUFBdkIsQ0FBNEIscUJBQWE7QUFDdEMsZ0JBQUdDLFNBQUgsRUFBYTtBQUNSO0FBQ0hKLG9CQUFJSyxJQUFKLENBQVMsRUFBQ0MsT0FBTyxtQkFBUixFQUFUO0FBQ0QsYUFIRCxNQUdPO0FBQ0gsb0NBQVFMLFdBQVIsRUFBcUJFLElBQXJCLENBQTBCLGdCQUFRO0FBQy9CSCx3QkFBSUssSUFBSixDQUFTO0FBQ1Qsb0NBQVksdUJBQVdOLEdBQVgsSUFBZ0JRLEtBQUtILFNBRHhCO0FBRVQsdUNBQWVIO0FBRk4scUJBQVQ7QUFJRixpQkFMRDtBQU1IO0FBQ0gsU0FaRDtBQWNGLEtBaEJELE1BZ0JNO0FBQ0ZELFlBQUlLLElBQUosQ0FBUyxFQUFDQyxPQUFPLDJCQUFSLEVBQVQ7QUFDSDtBQUNKLENBMUJEO0FBMkJBVixPQUFPRSxHQUFQLENBQVcsYUFBWCxFQUEwQixVQUFDQyxHQUFELEVBQU1DLEdBQU4sRUFBYztBQUNwQztBQUNBLFFBQUlJLFlBQVlMLElBQUlHLE1BQUosQ0FBV0UsU0FBM0I7QUFDQTtBQUNBO0FBQ0E7QUFDQSxnQ0FBZ0JBLFNBQWhCLEVBQ0dELElBREgsQ0FDUSx1QkFBZTtBQUNqQixZQUFJRixXQUFKLEVBQWlCO0FBQ2JELGdCQUFJUSxNQUFKLENBQVcsR0FBWCxFQUFnQkMsUUFBaEIsQ0FBeUJSLFdBQXpCO0FBQ0gsU0FGRCxNQUVPO0FBQ0hELGdCQUFJUSxNQUFKLENBQVcsR0FBWCxFQUFnQkgsSUFBaEIsQ0FBcUIsRUFBRUMsT0FBTyxnQkFBVCxFQUFyQjtBQUNIO0FBQ0osS0FQSDtBQVFILENBZEQiLCJmaWxlIjoicm91dGVyLmpzIiwic291cmNlUm9vdCI6Ii9hcHAvcm91dGVzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IGV4cHJlc3MgZnJvbSAnZXhwcmVzcydcbmltcG9ydCBpc1VybCBmcm9tICdpcy11cmwnXG5pbXBvcnQgeyBnZXRGdWxsVXJsLCBzYXZlVXJsLCBzZWFyY2hTaG9ydENvZGUsIHNlYXJjaFVybCwgbmV3U2hvcnRDb2RlIH0gZnJvbSAnLi4vdXRpbHMnXG5cbmV4cG9ydCBjb25zdCByb3V0ZXIgPSBleHByZXNzLlJvdXRlcigpXG5cbnJvdXRlci5nZXQoJy9uZXcvKicsIChyZXEsIHJlcykgPT4ge1xuICAgIC8vIFdlIGdldCB0aGUgZmlyc3QgaW5kZXggb2Ygb3VyIGFycmF5IG9mIHBhcmFtZXRlcnMgYmVjYXVzZSB1c2VyIGNhbiBpbnNlcnQgXG4gICAgLy8gYXMgbWFueSBhcyB1cmwgdGhleSB3YW50IGR1ZSB0byAnKicgc2lnbiBidXQgd2UgbmVlZCB0aGllciBiYXNlIHVybFxuICAgIGxldCBvcmlnaW5hbFVybCA9IHJlcS5wYXJhbXNbMF1cbiAgICAvLyB0aGVuIHdlIHRlc3QgZm9yIHZhbGlkaXR5IG9mIHRoZSB1cmwgaW5zZXJ0ZWQgYnkgdGhlIFVzZXIgXG4gICAgLy8gaWYgcGFzc2VkIHdlIHNlbmQganNvbiByZXNwb25zZSB3aXRoIHRoZSBvcmlnaW5hbCBhbmQgc2hvcnQgdXJsIHN1cHBsaWVkIGJ5IFVzZXJcbiAgICAvLyBvdGhlcndpc2UsIHdlIHNlbmQganNvbiByZXNwb25zZSB3aXRoIGVycm9yIG1lc3NhZ2VcbiAgICBpZihpc1VybChvcmlnaW5hbFVybCkpe1xuICAgICAgIC8vIFdlIGdlbmVyYXRlIG5ldyBzaG9ydCBjb2RlIGJ1dCBmaXJzdCBjaGVjayBpZiB3ZSBoYXZlIGR1cGxpY2F0ZSBVcmxcbiAgICAgICBzZWFyY2hVcmwob3JpZ2luYWxVcmwpLnRoZW4oc2hvcnRDb2RlID0+IHtcbiAgICAgICAgICBpZihzaG9ydENvZGUpe1xuICAgICAgICAgICAgICAgLy8gSWYgcGFzc2VkIHRoZSB0ZXN0IHdlIHNhdmUgc2hvcnQgY29kZSBhbmQgb3JpZ2luYWwgdXJsIHRvIGRhdGFiYXNlXG4gICAgICAgICAgICByZXMuanNvbih7ZXJyb3I6ICdVcmwgYWxyZWFkeSBleGlzdCd9KVxuICAgICAgICAgIH0gZWxzZSB7IFxuICAgICAgICAgICAgICBzYXZlVXJsKG9yaWdpbmFsVXJsKS50aGVuKHNhdmUgPT4ge1xuICAgICAgICAgICAgICAgICByZXMuanNvbih7XG4gICAgICAgICAgICAgICAgICdzaG9ydFVybCc6IGdldEZ1bGxVcmwocmVxKStzYXZlLnNob3J0Q29kZSxcbiAgICAgICAgICAgICAgICAgJ29yaWdpbmFsVXJsJzogb3JpZ2luYWxVcmwgXG4gICAgICAgICAgICAgfSlcbiAgICAgICAgICAgICAgfSkgXG4gICAgICAgICAgfVxuICAgICAgIH0pIFxuICAgICBcbiAgICB9ZWxzZSB7XG4gICAgICAgIHJlcy5qc29uKHtlcnJvcjogJ1BsZWFzZSBpbnNlcnQgY29ycmVjdCB1cmwnfSlcbiAgICB9XG59KVxucm91dGVyLmdldCgnLzpzaG9ydENvZGUnLCAocmVxLCByZXMpID0+IHtcbiAgICAvLyBXZSBnZXQgc2hvcnQgY29kZSBnaXZlbiBieSBVc2VyIGZyb20gdXJsIHRoZW4gY2hlY2sgaWYgaXMgY29ycmVjdCBlbHNlIHNlbmQgZXJyb3IgcmVzcG9uc2UgXG4gICAgbGV0IHNob3J0Q29kZSA9IHJlcS5wYXJhbXMuc2hvcnRDb2RlXG4gICAgLy8gdGhlbiB3ZSBzZWFyY2ggZm9yIHRoZSBzaG9ydCBjb2RlIGluIHRoZSBkYXRhYmFzZSBcbiAgICAvLyBpZiBleGlzdCB3ZSBnZXQgaXRzIG9yaWdpbmFsIHVybCB0aGVuIHJlZGlyZWN0IHRvIHRoZSBVcmwgb3RoZXJ3aXNlLCB3ZSBzZW5kIGVycm9yIFxuICAgIC8vIHJlc3BvbnNlIHRvIFVzZXIgXG4gICAgc2VhcmNoU2hvcnRDb2RlKHNob3J0Q29kZSlcbiAgICAgIC50aGVuKG9yaWdpbmFsVXJsID0+IHtcbiAgICAgICAgICBpZiAob3JpZ2luYWxVcmwpIHtcbiAgICAgICAgICAgICAgcmVzLnN0YXR1cygyMDApLnJlZGlyZWN0KG9yaWdpbmFsVXJsKVxuICAgICAgICAgIH0gZWxzZSB7XG4gICAgICAgICAgICAgIHJlcy5zdGF0dXMoNDA0KS5qc29uKHsgZXJyb3I6ICdQYWdlIG5vdCBmb3VuZCd9KVxuICAgICAgICAgIH1cbiAgICAgIH0pICBcbn0pXG5cblxuIl19",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "router.js"
+      ],
+      "names": [
+        "router",
+        "Router",
+        "get",
+        "req",
+        "res",
+        "originalUrl",
+        "params",
+        "then",
+        "shortCode",
+        "json",
+        "error",
+        "save",
+        "status",
+        "redirect"
+      ],
+      "mappings": ";;;;;;;AAAA;;;;AACA;;;;AACA;;;;AAEO,IAAMA,0BAAS,kBAAQC,MAAR,EAAf;;AAEPD,OAAOE,GAAP,CAAW,QAAX,EAAqB,UAACC,GAAD,EAAMC,GAAN,EAAc;AAC/B;AACA;AACA,QAAIC,cAAcF,IAAIG,MAAJ,CAAW,CAAX,CAAlB;AACA;AACA;AACA;AACA,QAAG,qBAAMD,WAAN,CAAH,EAAsB;AACnB;AACA,8BAAUA,WAAV,EAAuBE,IAAvB,CAA4B,qBAAa;AACtC,gBAAGC,SAAH,EAAa;AACR;AACHJ,oBAAIK,IAAJ,CAAS,EAACC,OAAO,mBAAR,EAAT;AACD,aAHD,MAGO;AACH,oCAAQL,WAAR,EAAqBE,IAArB,CAA0B,gBAAQ;AAC/BH,wBAAIK,IAAJ,CAAS;AACT,oCAAY,uBAAWN,GAAX,IAAgBQ,KAAKH,SADxB;AAET,uCAAeH;AAFN,qBAAT;AAIF,iBALD;AAMH;AACH,SAZD;AAcF,KAhBD,MAgBM;AACFD,YAAIK,IAAJ,CAAS,EAACC,OAAO,2BAAR,EAAT;AACH;AACJ,CA1BD;AA2BAV,OAAOE,GAAP,CAAW,aAAX,EAA0B,UAACC,GAAD,EAAMC,GAAN,EAAc;AACpC;AACA,QAAII,YAAYL,IAAIG,MAAJ,CAAWE,SAA3B;AACA;AACA;AACA;AACA,gCAAgBA,SAAhB,EACGD,IADH,CACQ,uBAAe;AACjB,YAAIF,WAAJ,EAAiB;AACbD,gBAAIQ,MAAJ,CAAW,GAAX,EAAgBC,QAAhB,CAAyBR,WAAzB;AACH,SAFD,MAEO;AACHD,gBAAIQ,MAAJ,CAAW,GAAX,EAAgBH,IAAhB,CAAqB,EAAEC,OAAO,gBAAT,EAArB;AACH;AACJ,KAPH;AAQH,CAdD",
+      "file": "router.js",
+      "sourceRoot": "/app/routes",
+      "sourcesContent": [
+        "import express from 'express'\nimport isUrl from 'is-url'\nimport { getFullUrl, saveUrl, searchShortCode, searchUrl, newShortCode } from '../utils'\n\nexport const router = express.Router()\n\nrouter.get('/new/*', (req, res) => {\n    // We get the first index of our array of parameters because user can insert \n    // as many as url they want due to '*' sign but we need thier base url\n    let originalUrl = req.params[0]\n    // then we test for validity of the url inserted by the User \n    // if passed we send json response with the original and short url supplied by User\n    // otherwise, we send json response with error message\n    if(isUrl(originalUrl)){\n       // We generate new short code but first check if we have duplicate Url\n       searchUrl(originalUrl).then(shortCode => {\n          if(shortCode){\n               // If passed the test we save short code and original url to database\n            res.json({error: 'Url already exist'})\n          } else { \n              saveUrl(originalUrl).then(save => {\n                 res.json({\n                 'shortUrl': getFullUrl(req)+save.shortCode,\n                 'originalUrl': originalUrl \n             })\n              }) \n          }\n       }) \n     \n    }else {\n        res.json({error: 'Please insert correct url'})\n    }\n})\nrouter.get('/:shortCode', (req, res) => {\n    // We get short code given by User from url then check if is correct else send error response \n    let shortCode = req.params.shortCode\n    // then we search for the short code in the database \n    // if exist we get its original url then redirect to the Url otherwise, we send error \n    // response to User \n    searchShortCode(shortCode)\n      .then(originalUrl => {\n          if (originalUrl) {\n              res.status(200).redirect(originalUrl)\n          } else {\n              res.status(404).json({ error: 'Page not found'})\n          }\n      })  \n})\n\n\n"
+      ]
+    },
+    "mtime": 1523047789104
+  },
+  "{\"filename\":\"/app/utils.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],null],[[],null],[[],null],[[],{\"loose\":false,\"spec\":false}],[[],null],[[],null],[[],{\"spec\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"async\":false,\"asyncGenerators\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.0": {
+    "metadata": {
+      "usedHelpers": [],
+      "marked": [],
+      "modules": {
+        "imports": [
+          {
+            "source": "./model/urlShortener",
+            "imported": [
+              "UrlShortener"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "UrlShortener",
+                "local": "UrlShortener"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [
+            "getFullUrl",
+            "saveUrl",
+            "searchShortCode",
+            "searchUrl",
+            "getShortCode"
+          ],
+          "specifiers": [
+            {
+              "kind": "local",
+              "local": "getFullUrl",
+              "exported": "getFullUrl"
+            },
+            {
+              "kind": "local",
+              "local": "saveUrl",
+              "exported": "saveUrl"
+            },
+            {
+              "kind": "local",
+              "local": "searchShortCode",
+              "exported": "searchShortCode"
+            },
+            {
+              "kind": "local",
+              "local": "searchUrl",
+              "exported": "searchUrl"
+            },
+            {
+              "kind": "local",
+              "local": "getShortCode",
+              "exported": "getShortCode"
+            }
+          ]
+        }
+      }
+    },
+    "options": {
+      "filename": "/app/utils.js",
+      "filenameRelative": "/app/utils.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false,
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "async": false,
+            "asyncGenerators": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "utils.js",
+      "sourceFileName": "utils.js",
+      "sourceRoot": "/app",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/app",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "utils"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.getShortCode = exports.searchUrl = exports.searchShortCode = exports.saveUrl = exports.getFullUrl = undefined;\n\nvar _urlShortener = require('./model/urlShortener');\n\nvar getFullUrl = exports.getFullUrl = function getFullUrl(req) {\n  return req.protocol + '//' + req.hostname + '/';\n};\n\nvar saveUrl = exports.saveUrl = function saveUrl(originalUrl) {\n  return getShortCode().then(function (shortCode) {\n    var save = (0, _urlShortener.UrlShortener)({ shortCode: shortCode, originalUrl: originalUrl });\n    return save.save();\n  });\n};\nvar searchShortCode = exports.searchShortCode = function searchShortCode(shortCode) {\n  return _urlShortener.UrlShortener.findOne({ shortCode: shortCode }).then(function (d) {\n    return d ? d.originalUrl : false;\n  });\n};\nvar searchUrl = exports.searchUrl = function searchUrl(url) {\n  return _urlShortener.UrlShortener.findOne({ originalUrl: url }).then(function (d) {\n    return d ? d.shortCode : false;\n  });\n};\nvar getShortCode = exports.getShortCode = function getShortCode() {\n  return _urlShortener.UrlShortener.find().sort({ shortCode: -1 }).limit(1).select({ _id: 0, shortCode: 1 }).then(function (d) {\n    return d.length === 1 ? d[0].shortCode + 1 : 0;\n  });\n};\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInV0aWxzLmpzIl0sIm5hbWVzIjpbImdldEZ1bGxVcmwiLCJyZXEiLCJwcm90b2NvbCIsImhvc3RuYW1lIiwic2F2ZVVybCIsIm9yaWdpbmFsVXJsIiwiZ2V0U2hvcnRDb2RlIiwidGhlbiIsInNhdmUiLCJzaG9ydENvZGUiLCJzZWFyY2hTaG9ydENvZGUiLCJmaW5kT25lIiwiZCIsInNlYXJjaFVybCIsInVybCIsImZpbmQiLCJzb3J0IiwibGltaXQiLCJzZWxlY3QiLCJfaWQiLCJsZW5ndGgiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7QUFDQTs7QUFHTyxJQUFNQSxrQ0FBYSxTQUFiQSxVQUFhLENBQUNDLEdBQUQsRUFBUztBQUNoQyxTQUFVQSxJQUFJQyxRQUFkLFVBQTJCRCxJQUFJRSxRQUEvQjtBQUNGLENBRk07O0FBSUEsSUFBTUMsNEJBQVUsU0FBVkEsT0FBVSxDQUFDQyxXQUFELEVBQWlCO0FBQ3BDLFNBQU9DLGVBQWVDLElBQWYsQ0FBb0IscUJBQWE7QUFDdEMsUUFBSUMsT0FBTyxnQ0FBYSxFQUFDQyxvQkFBRCxFQUFZSix3QkFBWixFQUFiLENBQVg7QUFDQSxXQUFPRyxLQUFLQSxJQUFMLEVBQVA7QUFDRCxHQUhNLENBQVA7QUFJSCxDQUxNO0FBTUEsSUFBTUUsNENBQWtCLFNBQWxCQSxlQUFrQixDQUFDRCxTQUFELEVBQWU7QUFDNUMsU0FBTywyQkFDSEUsT0FERyxDQUNLLEVBQUNGLG9CQUFELEVBREwsRUFDa0JGLElBRGxCLENBQ3VCO0FBQUEsV0FBS0ssSUFBSUEsRUFBRVAsV0FBTixHQUFvQixLQUF6QjtBQUFBLEdBRHZCLENBQVA7QUFFRCxDQUhNO0FBSUEsSUFBTVEsZ0NBQVksU0FBWkEsU0FBWSxDQUFDQyxHQUFELEVBQVM7QUFDaEMsU0FBTywyQkFDSEgsT0FERyxDQUNLLEVBQUNOLGFBQWFTLEdBQWQsRUFETCxFQUN5QlAsSUFEekIsQ0FDOEI7QUFBQSxXQUFLSyxJQUFJQSxFQUFFSCxTQUFOLEdBQWtCLEtBQXZCO0FBQUEsR0FEOUIsQ0FBUDtBQUVELENBSE07QUFJQSxJQUFJSCxzQ0FBZSxTQUFmQSxZQUFlLEdBQU07QUFDOUIsU0FBTywyQkFDSlMsSUFESSxHQUVKQyxJQUZJLENBRUMsRUFBQ1AsV0FBVyxDQUFDLENBQWIsRUFGRCxFQUdKUSxLQUhJLENBR0UsQ0FIRixFQUlKQyxNQUpJLENBSUcsRUFBQ0MsS0FBSyxDQUFOLEVBQVNWLFdBQVcsQ0FBcEIsRUFKSCxFQUtKRixJQUxJLENBS0MsYUFBSztBQUNQLFdBQU9LLEVBQUVRLE1BQUYsS0FBYSxDQUFiLEdBQWlCUixFQUFFLENBQUYsRUFBS0gsU0FBTCxHQUFpQixDQUFsQyxHQUFzQyxDQUE3QztBQUNILEdBUEksQ0FBUDtBQVFELENBVE0iLCJmaWxlIjoidXRpbHMuanMiLCJzb3VyY2VSb290IjoiL2FwcCIsInNvdXJjZXNDb250ZW50IjpbIlxuaW1wb3J0IHsgVXJsU2hvcnRlbmVyIH0gZnJvbSAnLi9tb2RlbC91cmxTaG9ydGVuZXInXG5cblxuZXhwb3J0IGNvbnN0IGdldEZ1bGxVcmwgPSAocmVxKSA9PiB7XG4gICByZXR1cm4gYCR7cmVxLnByb3RvY29sfS8vJHtyZXEuaG9zdG5hbWV9L2Bcbn1cblxuZXhwb3J0IGNvbnN0IHNhdmVVcmwgPSAob3JpZ2luYWxVcmwpID0+IHtcbiAgICByZXR1cm4gZ2V0U2hvcnRDb2RlKCkudGhlbihzaG9ydENvZGUgPT4ge1xuICAgICAgbGV0IHNhdmUgPSBVcmxTaG9ydGVuZXIoe3Nob3J0Q29kZSwgb3JpZ2luYWxVcmx9KVxuICAgICAgcmV0dXJuIHNhdmUuc2F2ZSgpIFxuICAgIH0pXG59XG5leHBvcnQgY29uc3Qgc2VhcmNoU2hvcnRDb2RlID0gKHNob3J0Q29kZSkgPT4ge1xuICByZXR1cm4gVXJsU2hvcnRlbmVyXG4gICAgIC5maW5kT25lKHtzaG9ydENvZGV9KS50aGVuKGQgPT4gZCA/IGQub3JpZ2luYWxVcmwgOiBmYWxzZSlcbn1cbmV4cG9ydCBjb25zdCBzZWFyY2hVcmwgPSAodXJsKSA9PiB7XG4gIHJldHVybiBVcmxTaG9ydGVuZXJcbiAgICAgLmZpbmRPbmUoe29yaWdpbmFsVXJsOiB1cmx9KS50aGVuKGQgPT4gZCA/IGQuc2hvcnRDb2RlIDogZmFsc2UpXG59XG5leHBvcnQgbGV0IGdldFNob3J0Q29kZSA9ICgpID0+IHtcbiAgcmV0dXJuIFVybFNob3J0ZW5lclxuICAgIC5maW5kKClcbiAgICAuc29ydCh7c2hvcnRDb2RlOiAtMX0pXG4gICAgLmxpbWl0KDEpXG4gICAgLnNlbGVjdCh7X2lkOiAwLCBzaG9ydENvZGU6IDF9KVxuICAgIC50aGVuKGQgPT4ge1xuICAgICAgICByZXR1cm4gZC5sZW5ndGggPT09IDEgPyBkWzBdLnNob3J0Q29kZSArIDEgOiAwXG4gICAgfSlcbn1cblxuXG4iXX0=",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "utils.js"
+      ],
+      "names": [
+        "getFullUrl",
+        "req",
+        "protocol",
+        "hostname",
+        "saveUrl",
+        "originalUrl",
+        "getShortCode",
+        "then",
+        "save",
+        "shortCode",
+        "searchShortCode",
+        "findOne",
+        "d",
+        "searchUrl",
+        "url",
+        "find",
+        "sort",
+        "limit",
+        "select",
+        "_id",
+        "length"
+      ],
+      "mappings": ";;;;;;;AACA;;AAGO,IAAMA,kCAAa,SAAbA,UAAa,CAACC,GAAD,EAAS;AAChC,SAAUA,IAAIC,QAAd,UAA2BD,IAAIE,QAA/B;AACF,CAFM;;AAIA,IAAMC,4BAAU,SAAVA,OAAU,CAACC,WAAD,EAAiB;AACpC,SAAOC,eAAeC,IAAf,CAAoB,qBAAa;AACtC,QAAIC,OAAO,gCAAa,EAACC,oBAAD,EAAYJ,wBAAZ,EAAb,CAAX;AACA,WAAOG,KAAKA,IAAL,EAAP;AACD,GAHM,CAAP;AAIH,CALM;AAMA,IAAME,4CAAkB,SAAlBA,eAAkB,CAACD,SAAD,EAAe;AAC5C,SAAO,2BACHE,OADG,CACK,EAACF,oBAAD,EADL,EACkBF,IADlB,CACuB;AAAA,WAAKK,IAAIA,EAAEP,WAAN,GAAoB,KAAzB;AAAA,GADvB,CAAP;AAED,CAHM;AAIA,IAAMQ,gCAAY,SAAZA,SAAY,CAACC,GAAD,EAAS;AAChC,SAAO,2BACHH,OADG,CACK,EAACN,aAAaS,GAAd,EADL,EACyBP,IADzB,CAC8B;AAAA,WAAKK,IAAIA,EAAEH,SAAN,GAAkB,KAAvB;AAAA,GAD9B,CAAP;AAED,CAHM;AAIA,IAAIH,sCAAe,SAAfA,YAAe,GAAM;AAC9B,SAAO,2BACJS,IADI,GAEJC,IAFI,CAEC,EAACP,WAAW,CAAC,CAAb,EAFD,EAGJQ,KAHI,CAGE,CAHF,EAIJC,MAJI,CAIG,EAACC,KAAK,CAAN,EAASV,WAAW,CAApB,EAJH,EAKJF,IALI,CAKC,aAAK;AACP,WAAOK,EAAEQ,MAAF,KAAa,CAAb,GAAiBR,EAAE,CAAF,EAAKH,SAAL,GAAiB,CAAlC,GAAsC,CAA7C;AACH,GAPI,CAAP;AAQD,CATM",
+      "file": "utils.js",
+      "sourceRoot": "/app",
+      "sourcesContent": [
+        "\nimport { UrlShortener } from './model/urlShortener'\n\n\nexport const getFullUrl = (req) => {\n   return `${req.protocol}//${req.hostname}/`\n}\n\nexport const saveUrl = (originalUrl) => {\n    return getShortCode().then(shortCode => {\n      let save = UrlShortener({shortCode, originalUrl})\n      return save.save() \n    })\n}\nexport const searchShortCode = (shortCode) => {\n  return UrlShortener\n     .findOne({shortCode}).then(d => d ? d.originalUrl : false)\n}\nexport const searchUrl = (url) => {\n  return UrlShortener\n     .findOne({originalUrl: url}).then(d => d ? d.shortCode : false)\n}\nexport let getShortCode = () => {\n  return UrlShortener\n    .find()\n    .sort({shortCode: -1})\n    .limit(1)\n    .select({_id: 0, shortCode: 1})\n    .then(d => {\n        return d.length === 1 ? d[0].shortCode + 1 : 0\n    })\n}\n\n\n"
+      ]
+    },
+    "mtime": 1523046392233
+  },
+  "{\"filename\":\"/app/model/urlShortener.js\",\"env\":{},\"retainLines\":false,\"highlightCode\":true,\"suppressDeprecationMessages\":false,\"presets\":[],\"plugins\":[[[],null],[[],null],[[],null],[[],{\"loose\":false,\"spec\":false}],[[],null],[[],null],[[],{\"spec\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"loose\":false}],[[],null],[[],null],[[],null],[[],{\"loose\":false}],[[],null],[[],{\"loose\":false}],[[],null],[[],null],[[],{\"loose\":false}],[[],{\"async\":false,\"asyncGenerators\":false}]],\"ignore\":[],\"code\":true,\"metadata\":true,\"ast\":true,\"comments\":true,\"compact\":\"auto\",\"minified\":false,\"sourceRoot\":\"/app/model\",\"babelrc\":true,\"sourceType\":\"module\",\"moduleIds\":false,\"passPerPreset\":false,\"parserOpts\":false,\"generatorOpts\":false}:6.26.0": {
+    "metadata": {
+      "usedHelpers": [
+        "interopRequireDefault"
+      ],
+      "marked": [],
+      "modules": {
+        "imports": [
+          {
+            "source": "mongoose",
+            "imported": [
+              "default"
+            ],
+            "specifiers": [
+              {
+                "kind": "named",
+                "imported": "default",
+                "local": "mongoose"
+              }
+            ]
+          }
+        ],
+        "exports": {
+          "exported": [
+            "UrlShortener"
+          ],
+          "specifiers": [
+            {
+              "kind": "local",
+              "local": "UrlShortener",
+              "exported": "UrlShortener"
+            }
+          ]
+        }
+      }
+    },
+    "options": {
+      "filename": "/app/model/urlShortener.js",
+      "filenameRelative": "/app/model/urlShortener.js",
+      "env": {},
+      "retainLines": false,
+      "highlightCode": true,
+      "suppressDeprecationMessages": false,
+      "presets": [],
+      "plugins": [
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false,
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "spec": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          null
+        ],
+        [
+          [],
+          {
+            "loose": false
+          }
+        ],
+        [
+          [],
+          {
+            "async": false,
+            "asyncGenerators": false
+          }
+        ]
+      ],
+      "ignore": [],
+      "code": true,
+      "metadata": true,
+      "ast": false,
+      "comments": true,
+      "compact": "auto",
+      "minified": false,
+      "sourceMaps": "both",
+      "sourceMapTarget": "urlShortener.js",
+      "sourceFileName": "urlShortener.js",
+      "sourceRoot": "/app/model",
+      "babelrc": false,
+      "sourceType": "module",
+      "moduleRoot": "/app/model",
+      "moduleIds": false,
+      "passPerPreset": false,
+      "parserOpts": false,
+      "generatorOpts": false,
+      "basename": "urlShortener"
+    },
+    "ignored": false,
+    "code": "'use strict';\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\nexports.UrlShortener = undefined;\n\nvar _mongoose = require('mongoose');\n\nvar _mongoose2 = _interopRequireDefault(_mongoose);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n_mongoose2.default.connect(process.env.MONGO_DB);\n\nvar urlShortenerSchema = _mongoose2.default.Schema({\n    shortCode: Number,\n    originalUrl: String\n});\n\nvar UrlShortener = exports.UrlShortener = _mongoose2.default.model('UrlShortener', urlShortenerSchema, \"urlshortener\");\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInVybFNob3J0ZW5lci5qcyJdLCJuYW1lcyI6WyJjb25uZWN0IiwicHJvY2VzcyIsImVudiIsIk1PTkdPX0RCIiwidXJsU2hvcnRlbmVyU2NoZW1hIiwiU2NoZW1hIiwic2hvcnRDb2RlIiwiTnVtYmVyIiwib3JpZ2luYWxVcmwiLCJTdHJpbmciLCJVcmxTaG9ydGVuZXIiLCJtb2RlbCJdLCJtYXBwaW5ncyI6Ijs7Ozs7OztBQUFBOzs7Ozs7QUFDQSxtQkFBU0EsT0FBVCxDQUFpQkMsUUFBUUMsR0FBUixDQUFZQyxRQUE3Qjs7QUFFQSxJQUFNQyxxQkFBcUIsbUJBQVNDLE1BQVQsQ0FBZ0I7QUFDdkNDLGVBQVdDLE1BRDRCO0FBRXZDQyxpQkFBYUM7QUFGMEIsQ0FBaEIsQ0FBM0I7O0FBS08sSUFBSUMsc0NBQWUsbUJBQVNDLEtBQVQsQ0FBZSxjQUFmLEVBQStCUCxrQkFBL0IsRUFBa0QsY0FBbEQsQ0FBbkIiLCJmaWxlIjoidXJsU2hvcnRlbmVyLmpzIiwic291cmNlUm9vdCI6Ii9hcHAvbW9kZWwiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgbW9uZ29vc2UgZnJvbSAnbW9uZ29vc2UnXG5tb25nb29zZS5jb25uZWN0KHByb2Nlc3MuZW52Lk1PTkdPX0RCKVxuXG5jb25zdCB1cmxTaG9ydGVuZXJTY2hlbWEgPSBtb25nb29zZS5TY2hlbWEoe1xuICAgIHNob3J0Q29kZTogTnVtYmVyLFxuICAgIG9yaWdpbmFsVXJsOiBTdHJpbmcgXG59KVxuXG5leHBvcnQgbGV0IFVybFNob3J0ZW5lciA9IG1vbmdvb3NlLm1vZGVsKCdVcmxTaG9ydGVuZXInLCB1cmxTaG9ydGVuZXJTY2hlbWEsXCJ1cmxzaG9ydGVuZXJcIilcblxuIl19",
+    "ast": null,
+    "map": {
+      "version": 3,
+      "sources": [
+        "urlShortener.js"
+      ],
+      "names": [
+        "connect",
+        "process",
+        "env",
+        "MONGO_DB",
+        "urlShortenerSchema",
+        "Schema",
+        "shortCode",
+        "Number",
+        "originalUrl",
+        "String",
+        "UrlShortener",
+        "model"
+      ],
+      "mappings": ";;;;;;;AAAA;;;;;;AACA,mBAASA,OAAT,CAAiBC,QAAQC,GAAR,CAAYC,QAA7B;;AAEA,IAAMC,qBAAqB,mBAASC,MAAT,CAAgB;AACvCC,eAAWC,MAD4B;AAEvCC,iBAAaC;AAF0B,CAAhB,CAA3B;;AAKO,IAAIC,sCAAe,mBAASC,KAAT,CAAe,cAAf,EAA+BP,kBAA/B,EAAkD,cAAlD,CAAnB",
+      "file": "urlShortener.js",
+      "sourceRoot": "/app/model",
+      "sourcesContent": [
+        "import mongoose from 'mongoose'\nmongoose.connect(process.env.MONGO_DB)\n\nconst urlShortenerSchema = mongoose.Schema({\n    shortCode: Number,\n    originalUrl: String \n})\n\nexport let UrlShortener = mongoose.model('UrlShortener', urlShortenerSchema,\"urlshortener\")\n\n"
+      ]
+    },
+    "mtime": 1523036210798
+  }
+}
