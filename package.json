@@ -1,0 +1,28 @@
+{
+  "name": "file-metadata",
+  "version": "1.0.0",
+  "author": "Muideen Adewale",
+  "scripts": {
+    "start": "babel-node server.js"
+  },
+  "engines": {
+    "node": "9.x"
+  },
+  "repository": {
+    "url": "https://glitch.com/edit/#!/url-shortener-muideen/"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "is-url": "^1.2.4",
+    "mongoose": "^5.0.12",
+    "babel-core": "^6.26.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-latest": "^6.24.1"
+  },
+  "babel": {
+    "presets": [
+      "latest"
+    ]
+  }
+}
